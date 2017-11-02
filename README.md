@@ -1,4 +1,4 @@
-Game Of life
+#Game Of life
 
 The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 
@@ -10,7 +10,7 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal grid 
 1. Any live cell with two or three live neighbours lives on to the next generation.
 1. Any dead cell with exactly three live neighbours becomes a live cell.
 
-Instructions
+##Instructions
 
 1. Clone the repository
 1. `cd GameOfLife`
