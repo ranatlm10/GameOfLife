@@ -81,8 +81,6 @@ class Space
         next_cell.live!
       end
     end
-
-    # puts "#{prev_cell.coords} => #{live_count}, #{prev_cell.get_value_char} => #{next_cell.get_value_char}"
   end
 
   def next_generation_util(next_gen_cells, indexes, index)
