@@ -14,9 +14,10 @@ space.set_cell_val([6, 3], 1)
 space.set_cell_val([7, 5], 1)
 space.set_cell_val([8, 4], 1)
 
+puts "Input :"
 space.print_cells
 
-puts ""
-
 space.create_next_generation
+
+puts "\nOutput :"
 space.print_cells
