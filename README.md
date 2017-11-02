@@ -13,7 +13,7 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal grid 
 Instructions
 
 1. Clone the repository
-1. cd GameOfLife
-1. bundle install
-1. Dry run - ruby main.rb
+1. `cd GameOfLife`
+1. `bundle install`
+1. Dry run - `ruby main.rb`
 1. Specs in spec/ folder
