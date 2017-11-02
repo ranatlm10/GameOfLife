@@ -17,3 +17,6 @@ Instructions
 1. `bundle install`
 1. Dry run - `ruby main.rb`
 1. Specs in spec/ folder
+1. `rspec spec/cell_spec.rb`
+1. `rspec spec/space_spec.rb`
+1. `rspec spec/main_spec.rb`
