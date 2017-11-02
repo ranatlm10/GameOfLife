@@ -147,4 +147,78 @@ describe "Game of life" do
       expect(cell.is_dead?).to be true
     end
   end
+
+  describe "pattern match after next generation" do
+    it "Pattern 1" do
+=begin
+  Input
+
+  ......
+  ..**..
+  .**...
+  ....*.
+  ..*...
+  ......
+
+  Output
+
+  ......
+  .***..
+  .**...
+  ..**..
+  ......
+  ......
+=end
+      @space.set_cell_val([1, 2], 1)
+      @space.set_cell_val([1, 3], 1)
+      @space.set_cell_val([2, 1], 1)
+      @space.set_cell_val([2, 2], 1)
+      @space.set_cell_val([3, 4], 1)
+      @space.set_cell_val([4, 2], 1)
+
+      @space.create_next_generation
+
+      expect(@space.cell_at([1, 1]).is_live?).to be true
+      expect(@space.cell_at([1, 2]).is_live?).to be true
+      expect(@space.cell_at([1, 3]).is_live?).to be true
+      expect(@space.cell_at([2, 1]).is_live?).to be true
+      expect(@space.cell_at([2, 2]).is_live?).to be true
+      expect(@space.cell_at([3, 2]).is_live?).to be true
+      expect(@space.cell_at([3, 3]).is_live?).to be true
+    end
+
+    it "Pattern 2" do
+=begin
+  Input
+
+  .....
+  ..*..
+  ...*.
+  .***.
+  .....
+
+
+  Output
+
+  .....
+  .....
+  .*.*.
+  ..**.
+  ..*..
+=end
+      @space.set_cell_val([1, 2], 1)
+      @space.set_cell_val([2, 3], 1)
+      @space.set_cell_val([3, 1], 1)
+      @space.set_cell_val([3, 2], 1)
+      @space.set_cell_val([3, 3], 1)
+
+      @space.create_next_generation
+
+      expect(@space.cell_at([2, 1]).is_live?).to be true
+      expect(@space.cell_at([2, 3]).is_live?).to be true
+      expect(@space.cell_at([3, 2]).is_live?).to be true
+      expect(@space.cell_at([3, 3]).is_live?).to be true
+      expect(@space.cell_at([4, 2]).is_live?).to be true
+    end
+  end
 end
